@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow Cafe - Kafe Kucing</title>
+    <style>
+        /* Desain Dasar & Warna */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf8f2;
+            color: #4a3728;
+        }
+
+        /* Navigasi */
+        header {
+            background-color: #f3d5b5;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #7f5539;
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #7f5539;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #b07d62;
+        }
+
+        /* Banner Utama */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #ede0d4;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            color: #7f5539;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: #b07d62;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #9c6644;
+        }
+
+        /* Konten Utama */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .about {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* Grid Fasilitas/Kucing */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: #7f5539;
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #7f5539;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bagian Navigasi -->
+    <header>
+        <a href="#" class="logo">🐾 Meow Cafe</a>
+        <nav>
+            <a href="#tentang">Tentang</a>
+            <a href="#fasilitas">Fasilitas</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- Bagian Banner -->
+    <section class="hero">
+        <h1>Selamat Datang di Meow Cafe</h1>
+        <p>Nikmati secangkir kopi hangat ditemani oleh puluhan kucing lucu dan menggemaskan.</p>
+        <a href="#kontak" class="btn">Reservasi Tempat</a>
+    </section>
+
+    <!-- Bagian Konten -->
+    <div class="container">
+        
+        <!-- Tentang Kami -->
+        <section id="tentang" class="about">
+            <h2>Tentang Kafe Kami</h2>
+            <p>Meow Cafe adalah tempat terbaik untuk melepas penat. Kami menyediakan ruang santai yang bersih, makanan dan minuman lezat, serta area bermain khusus bersama kucing-kucing yang ramah dan terawat dengan baik.</p>
+        </section>
+
+        <!-- Keunggulan/Fasilitas -->
+        <section id="fasilitas" class="features">
+            <div class="card">
+                <h2>☕</h2>
+                <h3>Kopi & Camilan</h3>
+                <p>Menu premium pilihan yang dibuat langsung oleh barista berpengalaman.</p>
+            </div>
+            <div class="card">
+                <h2>🐱</h2>
+                <h3>Kucing Terawat</h3>
+                <p>Semua kucing kami divaksin secara rutin, bersih, sehat, dan sangat ramah.</p>
+            </div>
+            <div class="card">
+                <h2>🌿</h2>
+                <h3>Area Nyaman</h3>
+                <p>Ruangan ber-AC penuh dengan mainan kucing dan tempat duduk yang estetik.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bagian Footer / Kontak -->
+    <footer id="kontak">
+        <p>&copy; 2026 Meow Cafe Indonesia. Buka Setiap Hari: 10.00 - 22.00 WIB</p>
+        <p>Hubungi Kami: info@meowcafe.com | Jakarta, Indonesia</p>
+    </footer>
+
+</body>
+</html>

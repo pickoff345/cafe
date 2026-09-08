@@ -1,0 +1,562 @@
+```css
+/* ================================
+   MEOW CAFE - MODERN CAT CAFE
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --cream: #fffaf5;
+    --cream-dark: #f7eadc;
+    --brown: #6f4e37;
+    --brown-dark: #4b3324;
+    --orange: #d9895b;
+    --orange-dark: #bd6d42;
+    --pink: #f3b8a6;
+    --white: #ffffff;
+    --text: #59483c;
+    --shadow: 0 10px 30px rgba(111, 78, 55, 0.12);
+    --radius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* ================================
+   NAVBAR
+   ================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+    background: rgba(255, 250, 245, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(111, 78, 55, 0.08);
+    box-shadow: 0 5px 20px rgba(111, 78, 55, 0.06);
+}
+
+.logo {
+    color: var(--brown);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    color: var(--orange);
+    transform: translateY(-2px);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    position: relative;
+
+    color: var(--brown);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--orange);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 580px;
+    padding: 100px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 10% 20%, rgba(243, 184, 166, 0.35), transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(217, 137, 91, 0.2), transparent 30%),
+        linear-gradient(135deg, #fff7ed, #f3e1d0);
+}
+
+.hero::before {
+    content: "🐾";
+    position: absolute;
+    top: 50px;
+    left: 8%;
+
+    font-size: 70px;
+    opacity: 0.12;
+
+    transform: rotate(-15deg);
+}
+
+.hero::after {
+    content: "🐱";
+    position: absolute;
+    right: 8%;
+    bottom: 50px;
+
+    font-size: 80px;
+    opacity: 0.12;
+
+    transform: rotate(10deg);
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    margin-bottom: 18px;
+
+    color: var(--brown-dark);
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    font-weight: 800;
+
+    animation: fadeUp 0.8s ease;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin-bottom: 35px;
+
+    color: #725c4b;
+    font-size: 18px;
+
+    animation: fadeUp 1s ease;
+}
+
+/* ================================
+   BUTTON
+   ================================ */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    color: white;
+    background: linear-gradient(
+        135deg,
+        var(--orange),
+        var(--orange-dark)
+    );
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 20px rgba(189, 109, 66, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    animation: fadeUp 1.2s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(
+        135deg,
+        var(--orange-dark),
+        var(--brown)
+    );
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(111, 78, 55, 0.25);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* ================================
+   CONTAINER
+   ================================ */
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 90px 0;
+}
+
+/* ================================
+   ABOUT
+   ================================ */
+
+.about {
+    max-width: 800px;
+    margin: 0 auto 80px;
+
+    text-align: center;
+}
+
+.about h2 {
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--brown-dark);
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.about h2::after {
+    content: "🐾";
+
+    position: absolute;
+    top: -30px;
+    right: -40px;
+
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.about p {
+    color: #756355;
+    font-size: 16px;
+}
+
+/* ================================
+   FEATURES
+   ================================ */
+
+.features {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 35px 28px;
+
+    text-align: center;
+
+    background: var(--white);
+
+    border: 1px solid rgba(111, 78, 55, 0.07);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        var(--orange),
+        var(--pink)
+    );
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 40px rgba(111, 78, 55, 0.18);
+}
+
+.card h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    background: var(--cream-dark);
+
+    border-radius: 50%;
+
+    font-size: 35px;
+
+    transition: 0.3s;
+}
+
+.card:hover h2 {
+    transform: scale(1.12) rotate(5deg);
+    background: #fce4d3;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+
+    color: var(--brown);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card p {
+    color: #78685c;
+    font-size: 14px;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    padding: 45px 20px;
+
+    color: #fff;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,0.08),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            var(--brown-dark),
+            var(--brown)
+        );
+}
+
+footer p {
+    margin: 5px 0;
+
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+footer p:first-child {
+    color: white;
+    font-weight: 600;
+}
+
+/* ================================
+   ANIMATION
+   ================================ */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   RESPONSIVE TABLET
+   ================================ */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 16px 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+        margin: auto;
+    }
+}
+
+/* ================================
+   RESPONSIVE MOBILE
+   ================================ */
+
+@media (max-width: 550px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 70px 20px;
+    }
+
+    .hero::before {
+        font-size: 45px;
+        left: 5%;
+    }
+
+    .hero::after {
+        font-size: 50px;
+        right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 65px 0;
+    }
+
+    .about {
+        margin-bottom: 55px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 30px 22px;
+    }
+
+    footer {
+        padding: 35px 15px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+/* ================================
+   ACCESSIBILITY
+   ================================ */
+
+a:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 4px;
+    border-radius: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+```
